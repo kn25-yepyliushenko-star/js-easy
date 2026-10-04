@@ -2,7 +2,12 @@
 // на певний символ, наприклад *.
 
 function replaceVowels(str) {
-  // Ваш код тут
+  const vowels = "aeiouyAEIOUY";
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    result += vowels.includes(str[i]) ? "*" : str[i];
+  }
+  return result;
 }
 
 console.log(replaceVowels("hello world")); // Виведе: "h*ll* w*rld"
